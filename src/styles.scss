@@ -1,0 +1,152 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* Colors */
+$primary: #FF9800;
+$darkpri: #F57C00;
+$lightpri: #FFE0B2;
+
+$texticon: #FFFFFF;
+$primarytext: #212121;
+$secondarytext: #757575;
+
+$accent: #448AFF;
+$dividercolor: #BDBDBD;
+
+$lightgrey: #f6f6f6;
+
+
+/* Interactive icons */
+.custom-icons {
+	cursor: pointer;
+	transition: 0.4 ease-in-out 0.2;
+}
+
+.custom-icons:active {
+	color: $lightpri;
+	margin-bottom: 7px;
+}
+
+
+/* Toolbar */
+mat-toolbar {
+	background: $darkpri;
+	color: $texticon;
+
+	i {
+		padding: 0.8rem;
+	}
+
+	span {
+		display: inline-block;
+		margin-left: 0.5rem;
+		font-size: 1.5rem;
+	}
+
+	.right-end-toolbar {
+		position: absolute;
+		right: 2rem;
+
+		span {
+			font-size: 1rem;
+			margin-left: 2rem;
+			cursor: pointer;
+			padding: 0.4rem 0.6rem;
+		}
+
+		span:hover {
+			background: $primary;
+		}
+
+	}
+}
+
+
+/* Login and Register */
+.login-container {
+	display: flex;
+	flex-direction: column;
+	
+	margin: 0 auto;
+	margin-top: 10rem;
+	padding: 2rem 1rem;
+
+	width: 25rem;
+	max-width: 95%;
+
+	border-radius: 7px;
+	border: 1px solid $dividercolor;
+
+	.login-title {
+		display: inline-block;
+		padding: 1rem;
+		font-size: 2rem;
+	}
+
+	mat-form-field {
+		padding: 0 1rem;
+		
+	}
+
+
+
+	button {
+		width: 50%;
+		margin: 0 auto;
+		color: #ffffff;
+		background: $primary;
+	}
+
+}
+
+
+
+/* Dashboard Content */
+.dashboard-container {
+	margin-left: 1.5rem;
+}
+
+
+/* Forms */
+mat-error {
+	font-size: 0.8rem;
+	padding: 0 1rem;
+}
+
+.form-container {
+
+	display: flex;
+	flex-direction: column;
+	
+	padding: 1rem 1rem;
+	width: 80%;
+	max-width: 90%;
+
+	.form-container-block {
+		border-radius: 7px;
+		border: 1px solid $dividercolor;
+		margin-bottom: 1rem;
+
+		h4 {
+			margin-left: 1.5rem;
+		}
+
+		.form-container-row {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-around;
+	
+			mat-form-field {
+				width: 25rem;
+				max-width: 90%;
+				min-width: 30%;
+			}
+	
+		}
+
+	}
+}

@@ -1,0 +1,61 @@
+<mat-toolbar>
+	<span>Revt a Room</span>
+
+	<div class="right-end-toolbar" (click)="goToLogin()">
+		<span>Login</span>
+	</div>
+
+</mat-toolbar>
+
+
+<div class="register-container">
+
+	<span>Register</span>
+        <mat-form-field>
+            <input [(ngModel)]="email" matInput placeholder="Email" type="email">
+        </mat-form-field>
+            <mat-error *ngIf="emailError">Invalid email</mat-error>
+        <mat-form-field>
+            <input [(ngModel)]="firstName" matInput placeholder="FirstName" type="firstname">
+        </mat-form-field>
+        
+        <mat-form-field>
+            <input [(ngModel)]="lastName" matInput placeholder="LastName" type="lastname">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input [(ngModel)]="password" matInput placeholder="Password" type="password">
+        </mat-form-field>
+        <mat-error *ngIf="passError">Invalid Password</mat-error>
+
+        <mat-form-field>
+            <input [(ngModel)]="username" matInput placeholder="Username" type="username">
+        </mat-form-field>
+
+    
+	
+	<br>
+
+	<button mat-button (click)="submitReg()">Register</button>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

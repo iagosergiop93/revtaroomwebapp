@@ -1,0 +1,48 @@
+@import '../../../styles.scss';
+
+.add-button {
+	button {
+		background: $primary;
+		color: #fff;
+	}
+}
+
+.no-rooms-msg {
+	width: 20rem;
+	padding: 1rem;
+	margin: 0 auto;
+	margin-top: 5rem;
+	text-align: center;
+	color: $secondarytext;
+
+	span {
+		font-size: 0.8rem;
+	}
+
+}
+
+.cards-container {
+	margin-top: 3rem;
+	display: flex;
+	flex-wrap: wrap;
+
+	mat-card {
+		width: 15rem;
+		margin: 1rem;
+
+		p {
+			padding-left: 1rem;
+		}
+	
+		mat-card-actions {
+			display: flex;
+			justify-content: flex-end;
+			margin-top: -0.5rem;
+			button {
+				margin: 0.5rem;
+				background: $lightgrey;
+			}
+	
+		}
+	}
+}

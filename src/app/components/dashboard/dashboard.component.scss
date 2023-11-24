@@ -1,0 +1,30 @@
+@import '../../../styles.scss';
+
+mat-sidenav-container {
+	height: 100%;
+
+	mat-sidenav {
+		width: 20rem;
+		height: 100%;
+		background: $lightgrey;
+		
+		h3 {
+			padding-left: 15px;
+		}
+
+		mat-list-item {
+			background: $lightgrey;
+			padding-left: 15px;
+		}
+	
+		mat-list-item:hover {
+			cursor: pointer;
+			background: $texticon;
+		}
+	
+	}
+
+
+}
+
+

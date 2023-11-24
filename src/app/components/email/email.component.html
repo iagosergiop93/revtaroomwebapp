@@ -1,0 +1,13 @@
+<div style="width: 90%;">
+	<form [formGroup]="emailCrafter" (ngSubmit)="onSubmit()">
+		<div id="Description">
+			<textarea class="form-control" formControlName="email" value={{body}}
+			style="resize: none;" rows="8" cols="50" maxlength="400"></textarea>
+		</div>
+		<hr>
+		<div class="form-group" id="send">
+			<button [disabled]="loading" class="btn btn-primary">Send</button>
+			<p *ngIf="errorTag">Error Updating User Bio.</p>
+		</div>
+	</form>
+</div>

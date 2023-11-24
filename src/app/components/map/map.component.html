@@ -1,0 +1,20 @@
+<h3>Map View</h3>
+
+<p>
+	Take a look at our map.
+</p>
+
+
+<mat-form-field>
+	<mat-select (selectionChange)="selectClusterType($event)" placeholder="Views">
+		<mat-option value=1>Monthly Housing Cost</mat-option>
+		<mat-option value=2>Rooms available</mat-option>
+		<mat-option value=3>Counting People</mat-option>
+	</mat-select>
+</mat-form-field>
+
+<br>
+
+<div id="mapId" leaflet class=""></div>
+
+<br>

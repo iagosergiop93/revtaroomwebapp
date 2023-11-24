@@ -1,0 +1,58 @@
+<form *ngIf="showForm" [formGroup]="housingForm" (ngSubmit)="onSubmit()" class="form-container">
+
+	<div class="form-container-block">
+		
+		<h4>Address</h4>
+
+		<div class="form-container-row">
+			<mat-form-field>
+				<input matInput placeholder="Street Address" formControlName="streetAddress">
+			</mat-form-field>
+			<!-- <div *ngIf="fields.streetAddress.errors">
+				<mat-error *ngIf="fields.streetAddress.errors.required">Street Address is required</mat-error>
+			</div> -->
+			<mat-form-field>
+				<input matInput placeholder="House Number" type="number" formControlName="houseNumber">
+			</mat-form-field>
+		</div>
+	
+		<div class="form-container-row">
+			<mat-form-field>
+				<input matInput placeholder="City" formControlName="city">
+			</mat-form-field>
+			<!-- <div *ngIf="submitted && fields.city.errors">
+				<mat-error *ngIf="fields.city.errors.required">City is required</mat-error>
+			</div> -->
+			<mat-form-field>
+				<mat-select [disabled]="!edit" placeholder="State" formControlName="state">
+				<mat-option *ngFor="let item of housingService.states" value={{item}}>{{ item }}</mat-option>
+				</mat-select>
+			</mat-form-field>
+			<!-- <div *ngIf="fields.state.errors">
+				<mat-error *ngIf="fields.state.errors.required">State is required</mat-error>	
+			</div> -->
+		</div>
+	
+		<br>
+	
+		<h4> {{ btnTitle }} </h4>
+		
+		<mat-form-field class="price">
+			<input matInput placeholder="Cost for a room in dollars" type="number" formControlName="pricePerMonth">
+		</mat-form-field>
+
+		<br>
+
+		<mat-form-field class="one-line">
+			<textarea rows="3" matInput placeholder="Description of the area, restaurants and markets around, traffic, public transportation etc."></textarea>
+		</mat-form-field>
+
+
+	</div>
+
+	<div class="btn-container">
+		<button [disabled]="!edit" mat-button type="submit"> Add {{ btnTitle }}</button>
+	</div>
+
+
+</form>

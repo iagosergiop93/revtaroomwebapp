@@ -1,0 +1,39 @@
+@import '../../../styles.scss';
+
+
+.one-line {
+	margin-left: 2rem;
+	width: 85%;
+}
+
+.price {
+	margin-left: 2rem;
+	width: 25rem;
+}
+
+.btn-container {
+	width: 100%;
+	text-align: right;
+
+	button {
+		color: #ffffff;
+		background: $primary;
+	}
+}
+
+
+.feedback {
+	padding: 20px;
+    color: white;
+    opacity: 0.83;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+}
+
+.positive {
+	background-color: #4CAF50;
+}
+
+.negative {
+	background-color: #f44336;
+}

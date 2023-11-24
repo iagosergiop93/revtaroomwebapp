@@ -1,0 +1,25 @@
+<div style="width: 90%;">
+	<div id="userBioProfilePicture">
+		<h2>{{username}}'s Bio</h2>
+	</div>
+	<form [formGroup]="userBioForm" (ngSubmit)="onSubmit()">
+		<div id="Description">
+			<textarea class="form-control" formControlName="abtMe" placeholder="About me..."
+				value={{currentAbtMe}} style="resize: none;" rows="7" cols="50" maxlength="300">{{currentAbtMe}}</textarea>
+		</div>
+		<div id="TrainingType" class="form-group">
+			<h4>Traning Type: {{trainingType}}</h4>
+			<select formControlName="training" class="form-control">
+				<option value=1>JAVA</option>
+				<option value=2>DEVOPS</option>
+				<option value=3>C#</option>
+				<option value=4>ANGULAR</option>
+			</select>
+		</div>
+		<hr>
+		<div class="form-group" id="userBioUpdateBtn">
+			<!-- <button [disabled]="loading" class="btn btn-primary">Update</button> -->
+			<p *ngIf="errorTag">Error Updating User Bio.</p>
+		</div>
+	</form>
+</div>

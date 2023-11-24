@@ -1,0 +1,35 @@
+<mat-toolbar>
+	<i class="fas fa-hamburger custom-icons" (click)="toggle()"></i>
+	<span>Revt a Room</span>
+
+	<div class="right-end-toolbar" (click)="logout()">
+		<span>Logout</span>
+	</div>
+
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container">
+	<mat-sidenav position="start" #sidenav mode="side" [(opened)]="opened">
+
+		<h3>Dashboard</h3>
+
+		<mat-list>
+			<mat-list-item [routerLink]="['/dashboard']"> Home </mat-list-item>
+			<mat-divider></mat-divider>
+			<mat-list-item [routerLink]="['/dashboard/userBio']"> Personal Info </mat-list-item>
+			<mat-divider></mat-divider>
+			<mat-list-item [routerLink]="['/dashboard/map']"> Map </mat-list-item>
+			<mat-divider></mat-divider>
+			<mat-list-item [routerLink]="['/dashboard/housing-info']"> Housing Info </mat-list-item>
+			<mat-divider></mat-divider>
+			<mat-list-item [routerLink]="['/dashboard/announcements']"> Announce a Room </mat-list-item>
+			<mat-divider></mat-divider>
+		</mat-list>
+	</mat-sidenav>
+
+	<mat-sidenav-content>
+		<div class="dashboard-container">
+			<router-outlet></router-outlet>
+		</div>
+	</mat-sidenav-content>
+</mat-sidenav-container>
